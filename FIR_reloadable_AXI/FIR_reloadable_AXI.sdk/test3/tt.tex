@@ -1,0 +1,142 @@
+\documentclass{article}
+%\title{RADAR_Perez_Vallat}  
+%\author{lptelecom92 }
+%\date{December 2020}
+%-------------Packages----------------
+\usepackage[francais]{babel}
+\usepackage[latin1,utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr} %Entête et pieds de page
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{libertine}
+\usepackage{amssymb} 
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{tabto}
+\usepackage[paper=portrait,pagesize]{typearea}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%--------- Parametrage script.m ---------------
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+%----------------------------------
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+%------------Paramètrage----------------------
+% Entêtes
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \usepackage{lastpage}
+    \renewcommand\headrulewidth{1pt}
+    \fancyhead[L]{Projet Objet Connecté}
+    \fancyhead[R]{INP-ENSEEIHT}
+    \renewcommand\footrulewidth{1pt}
+    \fancyfoot[R]{\today}
+    \geometry{footskip = 1cm}
+
+% Page modifiable page de garde
+    \setlength{\parindent}{0cm}
+    \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+    \newcommand{\hsp}{\hspace{20pt}}
+    \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+%------------page de garde--------------------
+\begin{document}
+\begin{titlepage}
+  \begin{sffamily}
+  \begin{center}
+
+     % Upper part of the page. The '~' is needed because \\
+    % only works if a paragraph has started.
+    %\includegraphics[scale=0.50]{pagedegarde/Title.png}~\\[1.5cm]
+
+    \textsc{\LARGE INP-ENSEEIHT}\\[2cm]
+
+    
+    \includegraphics[scale=1]{Figures/logoN7.png}
+    \\
+    
+    % Title
+    \HRule \\[0.4cm]
+        { \huge \bfseries PROJET RADAR REMOTE SENSING\\[0.4cm] }
+
+    \HRule \\[2cm]
+
+    % Author and supervisor
+    %\begin{minipage}{0.4\textwidth}
+      %\begin{flushleft} \large
+        Léa VALLAT\\
+        Luis PEREZ\\
+     % \end{flushleft}
+    %\end{minipage}
+    
+    \vfill
+
+    % Bottom of the page
+    {\large Année 2020-2021 / Semestre 2}
+
+  \end{center}
+  \end{sffamily}
+\end{titlepage}
+
+%-------------Sommaire-------------------------
+\newpage
+
+\section{Introduction}
+This document is a model and instructions for \LaTeX.
+Please observe the conference page limits. 
+
+
+%\listoffigures
+\tableofcontents
+%-----------document-----------
+
+\newpage
+\section{Remerciements}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

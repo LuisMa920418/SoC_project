@@ -1,0 +1,94 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6A4A8B19D01D55E9",
+      "device": "xc7a35tcpg236-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1"
+    },
+    "design_tree": {
+      "vio_0": "",
+      "coef_bank_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      }
+    },
+    "components": {
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "design_1_vio_0_0",
+        "parameters": {
+          "C_NUM_PROBE_OUT": {
+            "value": "4"
+          },
+          "C_PROBE_OUT0_WIDTH": {
+            "value": "25"
+          },
+          "C_PROBE_OUT1_WIDTH": {
+            "value": "3"
+          }
+        }
+      },
+      "coef_bank_0": {
+        "vlnv": "xilinx.com:user:coef_bank:1.0",
+        "xci_name": "design_1_coef_bank_0_0",
+        "parameters": {
+          "log2_nbr_coef": {
+            "value": "3"
+          },
+          "nbr_coef": {
+            "value": "8"
+          }
+        }
+      }
+    },
+    "nets": {
+      "vio_0_probe_out0": {
+        "ports": [
+          "vio_0/probe_out0",
+          "coef_bank_0/coef_data"
+        ]
+      },
+      "vio_0_probe_out1": {
+        "ports": [
+          "vio_0/probe_out1",
+          "coef_bank_0/addr"
+        ]
+      },
+      "vio_0_probe_out2": {
+        "ports": [
+          "vio_0/probe_out2",
+          "coef_bank_0/en"
+        ]
+      },
+      "vio_0_probe_out3": {
+        "ports": [
+          "vio_0/probe_out3",
+          "coef_bank_0/rst"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "vio_0/clk",
+          "coef_bank_0/clk"
+        ]
+      },
+      "coef_bank_0_dout": {
+        "ports": [
+          "coef_bank_0/dout",
+          "vio_0/probe_in0"
+        ]
+      }
+    }
+  }
+}

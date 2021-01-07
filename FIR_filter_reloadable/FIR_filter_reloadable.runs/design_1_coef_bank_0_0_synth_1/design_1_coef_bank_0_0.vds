@@ -1,0 +1,305 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec  6 17:07:43 2020
+# Process ID: 21052
+# Current directory: C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.runs/design_1_coef_bank_0_0_synth_1
+# Command line: vivado.exe -log design_1_coef_bank_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_coef_bank_0_0.tcl
+# Log file: C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.runs/design_1_coef_bank_0_0_synth_1/design_1_coef_bank_0_0.vds
+# Journal file: C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.runs/design_1_coef_bank_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_coef_bank_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/cosas/eseca_m2/soc/soc_project/vhdl/ekhi/soc_fir 2020-12-05/soc_fir/soc_fir.srcs/sources_1/new'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.cache/ip 
+Command: synth_design -top design_1_coef_bank_0_0 -part xc7a35tcpg236-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7320 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 479.516 ; gain = 188.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_coef_bank_0_0' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ip/design_1_coef_bank_0_0_1/synth/design_1_coef_bank_0_0.vhd:67]
+	Parameter coef_width bound to: 25 - type: integer 
+	Parameter nbr_coef bound to: 8 - type: integer 
+	Parameter log2_nbr_coef bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'coef_bank' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:14' bound to instance 'U0' of component 'coef_bank' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ip/design_1_coef_bank_0_0_1/synth/design_1_coef_bank_0_0.vhd:100]
+INFO: [Synth 8-638] synthesizing module 'coef_bank' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:29]
+	Parameter coef_width bound to: 25 - type: integer 
+	Parameter nbr_coef bound to: 8 - type: integer 
+	Parameter log2_nbr_coef bound to: 3 - type: integer 
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:25]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'bank_reg' (1#1) [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:25]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter coef_width bound to: 25 - type: integer 
+INFO: [Synth 8-3491] module 'bank_reg' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_reg.vhd:14' bound to instance 'R' of component 'bank_reg' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:55]
+	Parameter nbr_coef bound to: 8 - type: integer 
+	Parameter log2_nbr_coef bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'bank_ctrl' declared at 'c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_ctrl.vhd:14' bound to instance 'CTRL' of component 'bank_ctrl' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'bank_ctrl' [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_ctrl.vhd:27]
+	Parameter nbr_coef bound to: 8 - type: integer 
+	Parameter log2_nbr_coef bound to: 3 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'bank_ctrl' (2#1) [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/bank_ctrl.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'coef_bank' (3#1) [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ipshared/8532/coef_bank.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'design_1_coef_bank_0_0' (4#1) [c:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.srcs/sources_1/bd/design_1/ip/design_1_coef_bank_0_0_1/synth/design_1_coef_bank_0_0.vhd:67]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 543.648 ; gain = 252.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 543.648 ; gain = 252.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 543.648 ; gain = 252.148
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 543.648 ; gain = 252.148
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	               25 Bit    Registers := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module bank_reg 
+Detailed RTL Component Info : 
++---Registers : 
+	               25 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_15' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[0]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[1]'
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_14' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[1]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[2]'
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_13' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[2]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[3]'
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_12' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[3]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[4]'
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_11' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[4]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[5]'
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_10' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[5]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[6]'
+INFO: [Synth 8-3886] merging instance 'en_bus_regi_9' (FDPE) to 'en_bus_regi_8'
+INFO: [Synth 8-3886] merging instance 'U0/CTRL/en_bus_tristate_oe_reg[6]' (FDCE) to 'U0/CTRL/en_bus_tristate_oe_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/CTRL/en_bus_tristate_oe_reg[7] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_0' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_1' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_2' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_3' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_4' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_5' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_6' to logic
+CRITICAL WARNING: [Synth 8-5799] Converted tricell instance 'U0i_7' to logic
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT6 |     8|
+|2     |FDCE |   200|
+|3     |FDPE |     1|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------------+-----------+------+
+|      |Instance       |Module     |Cells |
++------+---------------+-----------+------+
+|1     |top            |           |   209|
+|2     |  U0           |coef_bank  |   208|
+|3     |    \REG[0].R  |bank_reg   |    26|
+|4     |    \REG[1].R  |bank_reg_0 |    26|
+|5     |    \REG[2].R  |bank_reg_1 |    26|
+|6     |    \REG[3].R  |bank_reg_2 |    26|
+|7     |    \REG[4].R  |bank_reg_3 |    26|
+|8     |    \REG[5].R  |bank_reg_4 |    26|
+|9     |    \REG[6].R  |bank_reg_5 |    26|
+|10    |    \REG[7].R  |bank_reg_6 |    26|
++------+---------------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 8 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 681.652 ; gain = 390.152
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 790.754 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+43 Infos, 1 Warnings, 8 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 790.754 ; gain = 499.961
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 790.754 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.runs/design_1_coef_bank_0_0_synth_1/design_1_coef_bank_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1243.402 ; gain = 452.648
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_coef_bank_0_0, cache-ID = 132849dcc1a02b1c
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1244.426 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/FIR_filter_reloadable/FIR_filter_reloadable.runs/design_1_coef_bank_0_0_synth_1/design_1_coef_bank_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_coef_bank_0_0_utilization_synth.rpt -pb design_1_coef_bank_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Dec  6 17:08:36 2020...

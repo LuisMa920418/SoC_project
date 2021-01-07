@@ -1,0 +1,59 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a35tcpg236-1",
+      "name": "test_FIR_alon",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1"
+    },
+    "design_tree": {
+      "FIR_0": "",
+      "vio_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "FREQ_HZ": {
+            "value": "100000000"
+          }
+        }
+      }
+    },
+    "components": {
+      "FIR_0": {
+        "vlnv": "xilinx.com:user:FIR:1.0",
+        "xci_name": "test_FIR_alon_FIR_0_0",
+        "parameters": {
+          "coef_width": {
+            "value": "2"
+          },
+          "log2_nbr_coef": {
+            "value": "1"
+          },
+          "nbr_coef": {
+            "value": "2"
+          },
+          "sig_width": {
+            "value": "4"
+          }
+        }
+      },
+      "vio_0": {
+        "vlnv": "xilinx.com:ip:vio:3.0",
+        "xci_name": "test_FIR_alon_vio_0_0"
+      }
+    },
+    "nets": {
+      "clk_1": {
+        "ports": [
+          "clk",
+          "vio_0/clk",
+          "FIR_0/clk"
+        ]
+      }
+    }
+  }
+}

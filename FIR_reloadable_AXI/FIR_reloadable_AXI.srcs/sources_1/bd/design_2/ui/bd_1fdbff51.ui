@@ -1,0 +1,19 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace inst vio_0 -pg 1 -lvl 1 -y -20 -defaultsOSRD
+preplace inst filter_top_0 -pg 1 -lvl 3 -y -60 -defaultsOSRD
+preplace inst vhdlnoclk_0 -pg 1 -lvl 2 -y -270 -defaultsOSRD
+preplace netloc vhdlnoclk_0_clk65MHz 1 0 3 -260 -130 N -130 270
+preplace netloc vio_0_probe_out0 1 1 2 20 -100 NJ
+preplace netloc filter_top_0_sig_out 1 0 4 -260 90 NJ 90 NJ 90 580
+preplace netloc vio_0_probe_out1 1 1 2 30 -80 NJ
+preplace netloc vio_0_probe_out2 1 1 2 40 -60 NJ
+preplace netloc vio_0_probe_out3 1 1 2 50 -40 NJ
+preplace netloc vio_0_probe_out4 1 1 2 60 -20 NJ
+preplace netloc vio_0_probe_out5 1 1 2 70 0 NJ
+levelinfo -pg 1 -280 -120 170 430 620 -top -370 -bot 240
+",
+}
+0

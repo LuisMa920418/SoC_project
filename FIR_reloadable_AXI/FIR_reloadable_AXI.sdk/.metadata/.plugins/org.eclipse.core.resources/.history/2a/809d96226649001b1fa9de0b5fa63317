@@ -1,0 +1,148 @@
+
+#include "FIR_driver.h"
+
+#include "filter_L.h"
+
+
+
+void set_custom_ip_register(u32 baseaddr, u32 offset, u32 value)
+{
+Xil_Out32(baseaddr + offset, value);
+}
+u32 get_custom_ip_register(u32 baseaddr, u32 offset)
+{
+u32 temp = 0;
+temp = Xil_In32(baseaddr + offset);
+return (temp);
+}
+
+
+
+void toggle_register( u32 mask,u32 baseaddr)
+{
+    //set the register
+    set_custom_ip_register(baseaddr, control_reg_offset, mask);
+   // usleep(1);
+    //clear the register
+    set_custom_ip_register(baseaddr, control_reg_offset, 0);
+}
+
+
+void charge_coef(filter instance_filter, int amount_coef_to_charge)
+{
+
+
+    //clear the sihft register to start for first position, by toggling the reset shift register
+    toggle_register( mask_rst_shift_register,instance_filter.baseadrr_L);
+    toggle_register( mask_rst_shift_register,instance_filter.baseadrr_R);
+
+
+
+
+  
+    for (int i = instance_filter.last_index_sent; i < instance_filter.order; i++)
+    {
+       // printf("Setting coef number: %d\n\r", i+1);
+        set_custom_ip_register(instance_filter.baseadrr_L, instance_filter.reg_offset, instance_filter.h_L[i]);
+        set_custom_ip_register(instance_filter.baseadrr_R, instance_filter.reg_offset, instance_filter.h_R[i]);
+    //  usleep(1);  xxxxxxxxxxxxxxxxxxxxxxxxxx check this time
+
+     //toggle the storage enable port in the fir
+     toggle_register( mask_en_store_coef,instance_filter.baseadrr_L);
+     toggle_register( mask_en_store_coef,instance_filter.baseadrr_R);
+
+    //  sleep(10);
+     //wait for a time to continue
+     //    usleep(1);   xxxxxxxxxxxxxxxx
+
+    if (i==instance_filter.order-1)
+{
+    instance_filter.last_index_sent =0;
+}
+
+    }
+    
+
+ printf("Coefficients loaded\n\r");
+}
+
+u32 filter_out(filter *InstancePtr,u32 data, int channel)
+
+
+{
+    u32 baseaddr;
+if (channel==left_ear)
+{
+    /* channel 0 is left side */
+     baseaddr = InstancePtr->baseadrr_L;
+    
+}
+else
+{
+     /* channel 1 is right side */
+     baseaddr = InstancePtr->baseadrr_R;
+}
+    
+    //inputs one sample to the register and reads the results of the filtering
+
+
+    //write the sig_in register
+    set_custom_ip_register(baseaddr, signal_offset, data);
+    usleep(1);
+    //trigger the toggle to store
+    toggle_register( mask_en_filtering,baseaddr);
+    //wait for sometime
+    
+  //  usleep(1); xxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    
+    //read the result
+      return (get_data_filtered(InstancePtr,channel));
+}
+
+u32 get_data_filtered(filter *InstancePtr, int channel)
+{  
+    
+    u32 baseaddr;
+    int unity_gain_factor;
+if (channel==left_ear)
+{
+    /* channel 0 is left side */
+     baseaddr = InstancePtr->baseadrr_L;
+     unity_gain_factor = InstancePtr->h_L_normalization_factor;
+    
+}
+else
+{
+     /* channel 1 is right side */
+     baseaddr = InstancePtr->baseadrr_R;
+     unity_gain_factor = InstancePtr->h_R_normalization_factor;
+}
+    
+    signed long long signal_out = 0;
+    u32 nibble = 0;
+   //get the most significant 32 bits of sig_out
+   nibble = get_custom_ip_register(baseaddr, 4);
+   signal_out = (signed long long) nibble;
+   
+   
+   
+  signal_out = signal_out<<32; //put the high nibble in the highest 32 bits of signal_out
+   
+//get the least significant 32 bits of sig_out
+nibble = get_custom_ip_register(baseaddr, 0);
+ signal_out = signal_out | (signed long long) nibble;
+
+
+ unity_gain_factor = unity_gain_factor*4;//xxxxxxxxxxxxxxx
+ //dividing by the unity gain factor
+signal_out = signal_out/unity_gain_factor; 
+
+//no es hacer trunk es simplemente hacer que la ganancia del filtro sea unitaria, calculando la suma de todos los coeficientes y dividiendo por ese valor al valor de salida cuando se filtra,
+//ademas se debe calcular el valr de normalizacion  pra cada uno de los filtros izqdo y derecho
+
+//converting to u32
+u32 result = (u32) signal_out;
+//masking the remainder 8 bits in the 32 bits of result
+result = result & 0x00FFFFFF;
+ return (result);
+}

@@ -1,0 +1,60 @@
+{
+   ExpandedHierarchyInLayout: "",
+   guistr: "# # String gsaved with Nlview 6.8.5  2018-01-30 bk=1.4354 VDI=40 GEI=35 GUI=JA:1.6 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -y 80 -defaultsOSRD
+preplace port AC_MCLK -pg 1 -y 220 -defaultsOSRD
+preplace port AC_MUTEN -pg 1 -y 320 -defaultsOSRD
+preplace port sw -pg 1 -y 620 -defaultsOSRD
+preplace port btn -pg 1 -y 600 -defaultsOSRD
+preplace port IIC_0 -pg 1 -y 120 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 100 -defaultsOSRD
+preplace port leds -pg 1 -y 450 -defaultsOSRD
+preplace portBus AC_RECLRC -pg 1 -y 360 -defaultsOSRD
+preplace portBus AC_RECDAT -pg 1 -y 150 -defaultsOSRD
+preplace portBus AC_PBLRC -pg 1 -y 340 -defaultsOSRD
+preplace portBus AC_BCLK -pg 1 -y 20 -defaultsOSRD
+preplace portBus AC_PBDAT -pg 1 -y 300 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -y 510 -defaultsOSRD
+preplace inst FIR_reloadable_v1_0_0 -pg 1 -lvl 4 -y 510 -defaultsOSRD
+preplace inst FIR_reloadable_v1_0_1 -pg 1 -lvl 4 -y 690 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 5 -y 610 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 5 -y 450 -defaultsOSRD
+preplace inst axi_i2s_adi_0 -pg 1 -lvl 4 -y 170 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -y -120 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 5 -y 160 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 5 2 NJ 80 N
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 4 500 -340 NJ -340 NJ -340 1970
+preplace netloc axi_i2s_adi_0_DMA_RX_REQ 1 4 1 N
+preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 1390
+preplace netloc axi_i2s_adi_0_DMA_TX_REQ 1 4 1 N
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 5 50J 400 NJ 400 450 330 NJ 330 1370
+preplace netloc processing_system7_0_IIC_0 1 5 2 NJ 120 N
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 4 480 -330 NJ -330 NJ -330 1960
+preplace netloc axi_i2s_adi_0_SDATA_O 1 4 3 850J 300 NJ 300 N
+preplace netloc ps7_0_axi_periph_M01_AXI 1 4 3 910 370 NJ 370 1930
+preplace netloc processing_system7_0_DMA0_ACK 1 3 3 510 0 NJ 0 1380
+preplace netloc rst_ps7_0_50M_interconnect_aresetn 1 2 4 400J -220 NJ -220 NJ -220 NJ
+preplace netloc processing_system7_0_DMA1_ACK 1 3 3 520 10 NJ 10 1370
+preplace netloc axi_i2s_adi_0_BCLK_O 1 4 3 870J 310 NJ 310 1960
+preplace netloc AC_RECDAT_1 1 0 4 NJ 150 NJ 150 NJ 150 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 5 2 NJ 100 N
+preplace netloc axi_gpio_0_GPIO2 1 5 2 NJ 620 N
+preplace netloc axi_i2s_adi_0_MUTEN_O 1 4 3 840J 320 NJ 320 N
+preplace netloc axi_i2s_adi_0_LRCLK_O 1 4 3 860J 340 NJ 340 1960
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 4 N 550 470 360 890 20 1410
+preplace netloc axi_gpio_0_GPIO 1 5 2 NJ 600 N
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 4 490 -320 NJ -320 NJ -320 1950
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 5 60 410 N 410 460 340 880 -10 1400
+preplace netloc axi_gpio_1_GPIO 1 5 2 NJ 450 N
+preplace netloc ps7_0_axi_periph_M00_AXI 1 4 3 900 360 NJ 360 1940
+preplace netloc processing_system7_0_FCLK_CLK1 1 3 4 520 350 NJ 350 1400 220 N
+levelinfo -pg 1 -10 30 230 430 680 1170 1780 2100 -top -350 -bot 1170
+",
+}
+{
+   da_axi4_cnt: "28",
+   da_board_cnt: "3",
+   da_clkrst_cnt: "2",
+   da_ps7_cnt: "2",
+}

@@ -1,0 +1,129 @@
+03:04:38 **** Build of configuration Debug for project test2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/FIR_driver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FIR_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/FIR_driver.d" -MT"src/FIR_driver.o" -o "src/FIR_driver.o" "../src/FIR_driver.c"
+../src/FIR_driver.c: In function 'charge_coef':
+../src/FIR_driver.c:41:7: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+       usleep(1);
+       ^~~~~~
+       fseek
+'Finished building: ../src/FIR_driver.c'
+' '
+'Building file: ../src/audio_fun.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio_fun.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/audio_fun.d" -MT"src/audio_fun.o" -o "src/audio_fun.o" "../src/audio_fun.c"
+'Finished building: ../src/audio_fun.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:98:14: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+  charge_coef(h_low,AXI_FIR_R_addres);
+              ^~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:99:16: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+    charge_coef(h_low,AXI_FIR_L_addres);
+                ^~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:121:13: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   if(swState==0&state!=0)
+      ~~~~~~~^~~
+../src/helloworld.c:123:16: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+    charge_coef(h_low_kaiser_44100,AXI_FIR_R_addres);
+                ^~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:124:15: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+   charge_coef(h_low_kaiser_44100,AXI_FIR_L_addres);
+               ^~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:130:18: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   else if(swState==1&state!=1)
+           ~~~~~~~^~~
+../src/helloworld.c:132:16: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+    charge_coef(h_high_kaiser_44100,AXI_FIR_R_addres);
+                ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:133:15: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+   charge_coef(h_high_kaiser_44100,AXI_FIR_L_addres);
+               ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:164:5: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+     usleep(10);
+     ^~~~~~
+     fseek
+../src/helloworld.c:112:13: warning: unused variable 'previous_state' [-Wunused-variable]
+  static int previous_state=0;
+             ^~~~~~~~~~~~~~
+../src/helloworld.c:87:9: warning: unused variable 'btnState' [-Wunused-variable]
+     int btnState = 0;
+         ^~~~~~~~
+../src/helloworld.c:85:15: warning: unused variable 'output' [-Wunused-variable]
+  XGpio input, output;
+               ^~~~~~
+../src/helloworld.c:78:15: warning: unused variable 'h_high' [-Wunused-variable]
+  signed long  h_high[40] =  {1085,-1471,-1934,265,2335,196,-3376,-1588,4078,3683,-4312,-6732,3572,11001,-1065,-17404,-5391,30263,28893,-126792,126792,-28893,-30263,5391,17404,1065,-11001,-3572,6732,4312,-3683,-4078,1588,3376,-196,-2335,-265,1934,1471,-1085};
+               ^~~~~~
+../src/helloworld.c:77:16: warning: unused variable 'h_low_kaiser' [-Wunused-variable]
+     signed int h_low_kaiser[40]= {410,-985,-2123,-2477,-1782,-190,1740,3216,3509,2263,-295,-3338,-5642,-5966,-3484,1881,9333,17358,24122,27985,27985,24122,17358,9333,1881,-3484,-5966,-5642,-3338,-295,2263,3509,3216,1740,-190,-1782,-2477,-2123,-985,410};
+                ^~~~~~~~~~~~
+../src/helloworld.c:72:13: warning: unused variable 'h_low_blackman_window' [-Wunused-variable]
+  signed int h_low_blackman_window[40] = {0,-17,-96,-202,-225,-34,413,969,1295,993,-151,-1935,-3655,-4249,-2689,1553,8139,15809,22696,26922,26922,22696,15809,8139,1553,-2689,-4249,-3655,-1935,-151,993,1295,969,413,-34,-225,-202,-96,-17,0};
+             ^~~~~~~~~~~~~~~~~~~~~
+At top level:
+../src/helloworld.c:112:13: warning: 'previous_state' defined but not used [-Wunused-variable]
+  static int previous_state=0;
+             ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps.d" -MT"src/timer_ps.o" -o "src/timer_ps.o" "../src/timer_ps.c"
+'Finished building: ../src/timer_ps.c'
+' '
+'Building target: test2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test2_bsp/ps7_cortexa9_0/lib -o "test2.elf"  ./src/FIR_driver.o ./src/audio_fun.o ./src/helloworld.o ./src/platform.o ./src/timer_ps.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test2.elf  |tee "test2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84112	   2632	  23440	 110184	  1ae68	test2.elf
+'Finished building: test2.elf.size'
+' '
+
+03:04:43 Build Finished (took 5s.38ms)
+

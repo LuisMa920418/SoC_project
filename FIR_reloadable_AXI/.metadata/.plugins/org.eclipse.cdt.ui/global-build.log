@@ -1,0 +1,322 @@
+03:03:39 **** Clean-only build of configuration Debug for project fir_reload_1 ****
+make clean 
+rm -rf  ./src/testperiph.o ./src/xdevcfg_selftest_example.o ./src/xdmaps_example_w_intr.o ./src/xscugic_tapp_example.o ./src/xscutimer_intr_example.o ./src/xscutimer_polled_example.o ./src/xscuwdt_intr_example.o  ./src/testperiph.d ./src/xdevcfg_selftest_example.d ./src/xdmaps_example_w_intr.d ./src/xscugic_tapp_example.d ./src/xscutimer_intr_example.d ./src/xscutimer_polled_example.d ./src/xscuwdt_intr_example.d  fir_reload_1.elf.size  fir_reload_1.elf
+' '
+03:03:41 **** Build of configuration Debug for project fir_reload_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/testperiph.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/testperiph.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../fir_reload_1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/testperiph.d" -MT"src/testperiph.o" -o "src/testperiph.o" "../src/testperiph.c"
+../src/testperiph.c:31:10: fatal error: xparameters.h: No such file or directory
+ #include "xparameters.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/testperiph.o] Error 1
+03:03:42 **** Build of project test2_bsp ****
+make -k all 
+"Running Make include in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_00_a/src"
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_00_a/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/common_v1_00_a/src"
+make -C ps7_cortexa9_0/libsrc/common_v1_00_a/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/iicps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Running Make libs in ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_00_a/src"
+make -C ps7_cortexa9_0/libsrc/axi_i2s_adi_v1_00_a/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling axi_i2s_adi..."
+In file included from axi_i2s_adi.h:7:0,
+                 from axi_i2s_adi.c:4:
+../../../include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../../include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from axi_i2s_adi.h:7:0,
+                 from axi_i2s_adi_selftest.c:3:
+../../../include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../../include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+axi_i2s_adi_selftest.c: In function 'AXI_I2S_ADI_Reg_SelfTest':
+axi_i2s_adi_selftest.c:52:60: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( AXI_I2S_ADI_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                            ^~
+axi_i2s_adi_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/common_v1_00_a/src"
+make -C ps7_cortexa9_0/libsrc/common_v1_00_a/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling common"
+xutil_memtest.c: In function 'XUtil_MemoryTest32':
+xutil_memtest.c:161:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:170:2: note: here
+  case XUT_WALKONES:
+  ^~~~
+xutil_memtest.c:222:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:231:2: note: here
+  case XUT_WALKZEROS:
+  ^~~~
+xutil_memtest.c:286:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:294:2: note: here
+  case XUT_INVERSEADDR:
+  ^~~~
+xutil_memtest.c:327:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:337:2: note: here
+  case XUT_FIXEDPATTERN:
+  ^~~~
+xutil_memtest.c: In function 'XUtil_MemoryTest16':
+xutil_memtest.c:496:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:504:2: note: here
+  case XUT_WALKONES:
+  ^~~~
+xutil_memtest.c:559:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:568:2: note: here
+  case XUT_WALKZEROS:
+  ^~~~
+xutil_memtest.c:625:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:633:2: note: here
+  case XUT_INVERSEADDR:
+  ^~~~
+xutil_memtest.c:664:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:674:2: note: here
+  case XUT_FIXEDPATTERN:
+  ^~~~
+xutil_memtest.c: In function 'XUtil_MemoryTest8':
+xutil_memtest.c:836:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:845:2: note: here
+  case XUT_WALKONES:
+  ^~~~
+xutil_memtest.c:897:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:906:2: note: here
+  case XUT_WALKZEROS:
+  ^~~~
+xutil_memtest.c:962:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:970:2: note: here
+  case XUT_INVERSEADDR:
+  ^~~~
+xutil_memtest.c:1002:7: warning: this statement may fall through [-Wimplicit-fallthrough=]
+    if (Subtest != XUT_ALLMEMTESTS) {
+       ^
+xutil_memtest.c:1012:2: note: here
+  case XUT_FIXEDPATTERN:
+  ^~~~
+"Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling coresightps_dcc"
+"Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src"
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling cpu_cortexa9"
+"Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src"
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling ddrps"
+"Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src"
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling devcfg"
+"Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_3/src"
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling dmaps"
+"Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src"
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in ps7_cortexa9_0/libsrc/iicps_v3_7/src"
+make -C ps7_cortexa9_0/libsrc/iicps_v3_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling iicps"
+"Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_9/src"
+make -C ps7_cortexa9_0/libsrc/scugic_v3_9/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scugic"
+"Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scutimer"
+"Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src"
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling scuwdt"
+"Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_7/src"
+make -C ps7_cortexa9_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling standalone"
+"Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_6/src"
+make -C ps7_cortexa9_0/libsrc/uartps_v3_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling uartps"
+"Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_2/src"
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+"Compiling xadcps"
+'Finished building libraries'
+03:04:37 **** Clean-only build of configuration Debug for project test2 ****
+make clean 
+rm -rf  ./src/FIR_driver.o ./src/audio_fun.o ./src/helloworld.o ./src/platform.o ./src/timer_ps.o  ./src/FIR_driver.d ./src/audio_fun.d ./src/helloworld.d ./src/platform.d ./src/timer_ps.d  test2.elf.size  test2.elf
+' '
+03:04:38 **** Build of configuration Debug for project test2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/FIR_driver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FIR_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/FIR_driver.d" -MT"src/FIR_driver.o" -o "src/FIR_driver.o" "../src/FIR_driver.c"
+../src/FIR_driver.c: In function 'charge_coef':
+../src/FIR_driver.c:41:7: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+       usleep(1);
+       ^~~~~~
+       fseek
+'Finished building: ../src/FIR_driver.c'
+' '
+'Building file: ../src/audio_fun.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio_fun.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/audio_fun.d" -MT"src/audio_fun.o" -o "src/audio_fun.o" "../src/audio_fun.c"
+'Finished building: ../src/audio_fun.c'
+' '
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:98:14: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+  charge_coef(h_low,AXI_FIR_R_addres);
+              ^~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:99:16: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+    charge_coef(h_low,AXI_FIR_L_addres);
+                ^~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:121:13: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   if(swState==0&state!=0)
+      ~~~~~~~^~~
+../src/helloworld.c:123:16: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+    charge_coef(h_low_kaiser_44100,AXI_FIR_R_addres);
+                ^~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:124:15: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+   charge_coef(h_low_kaiser_44100,AXI_FIR_L_addres);
+               ^~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:130:18: warning: suggest parentheses around comparison in operand of '&' [-Wparentheses]
+   else if(swState==1&state!=1)
+           ~~~~~~~^~~
+../src/helloworld.c:132:16: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+    charge_coef(h_high_kaiser_44100,AXI_FIR_R_addres);
+                ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:133:15: warning: passing argument 1 of 'charge_coef' from incompatible pointer type [-Wincompatible-pointer-types]
+   charge_coef(h_high_kaiser_44100,AXI_FIR_L_addres);
+               ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/filter_data_base.h:16:0,
+                 from ../src/helloworld.c:24:
+../src/FIR_driver.h:27:6: note: expected 'u32 * {aka long unsigned int *}' but argument is of type 'int *'
+ void charge_coef(u32 *filter_coef,u32 baseaddr);
+      ^~~~~~~~~~~
+../src/helloworld.c:164:5: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+     usleep(10);
+     ^~~~~~
+     fseek
+../src/helloworld.c:112:13: warning: unused variable 'previous_state' [-Wunused-variable]
+  static int previous_state=0;
+             ^~~~~~~~~~~~~~
+../src/helloworld.c:87:9: warning: unused variable 'btnState' [-Wunused-variable]
+     int btnState = 0;
+         ^~~~~~~~
+../src/helloworld.c:85:15: warning: unused variable 'output' [-Wunused-variable]
+  XGpio input, output;
+               ^~~~~~
+../src/helloworld.c:78:15: warning: unused variable 'h_high' [-Wunused-variable]
+  signed long  h_high[40] =  {1085,-1471,-1934,265,2335,196,-3376,-1588,4078,3683,-4312,-6732,3572,11001,-1065,-17404,-5391,30263,28893,-126792,126792,-28893,-30263,5391,17404,1065,-11001,-3572,6732,4312,-3683,-4078,1588,3376,-196,-2335,-265,1934,1471,-1085};
+               ^~~~~~
+../src/helloworld.c:77:16: warning: unused variable 'h_low_kaiser' [-Wunused-variable]
+     signed int h_low_kaiser[40]= {410,-985,-2123,-2477,-1782,-190,1740,3216,3509,2263,-295,-3338,-5642,-5966,-3484,1881,9333,17358,24122,27985,27985,24122,17358,9333,1881,-3484,-5966,-5642,-3338,-295,2263,3509,3216,1740,-190,-1782,-2477,-2123,-985,410};
+                ^~~~~~~~~~~~
+../src/helloworld.c:72:13: warning: unused variable 'h_low_blackman_window' [-Wunused-variable]
+  signed int h_low_blackman_window[40] = {0,-17,-96,-202,-225,-34,413,969,1295,993,-151,-1935,-3655,-4249,-2689,1553,8139,15809,22696,26922,26922,22696,15809,8139,1553,-2689,-4249,-3655,-1935,-151,993,1295,969,413,-34,-225,-202,-96,-17,0};
+             ^~~~~~~~~~~~~~~~~~~~~
+At top level:
+../src/helloworld.c:112:13: warning: 'previous_state' defined but not used [-Wunused-variable]
+  static int previous_state=0;
+             ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building file: ../src/timer_ps.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/timer_ps.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/timer_ps.d" -MT"src/timer_ps.o" -o "src/timer_ps.o" "../src/timer_ps.c"
+'Finished building: ../src/timer_ps.c'
+' '
+'Building target: test2.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test2_bsp/ps7_cortexa9_0/lib -o "test2.elf"  ./src/FIR_driver.o ./src/audio_fun.o ./src/helloworld.o ./src/platform.o ./src/timer_ps.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test2.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test2.elf  |tee "test2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84112	   2632	  23440	 110184	  1ae68	test2.elf
+'Finished building: test2.elf.size'
+' '

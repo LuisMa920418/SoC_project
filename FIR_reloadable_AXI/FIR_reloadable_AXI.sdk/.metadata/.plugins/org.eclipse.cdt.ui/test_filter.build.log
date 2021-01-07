@@ -1,0 +1,23 @@
+01:57:23 **** Auto Build of configuration Debug for project test_filter ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/audio_fun.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/audio_fun.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test_filter_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/audio_fun.d" -MT"src/audio_fun.o" -o "src/audio_fun.o" "../src/audio_fun.c"
+'Finished building: ../src/audio_fun.c'
+' '
+'Building target: test_filter.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../test_filter_bsp/ps7_cortexa9_0/lib -o "test_filter.elf"  ./src/FIR_driver.o ./src/audio_fun.o ./src/filter_driver_H.o ./src/helloworld.o ./src/platform.o ./src/timer_ps.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: test_filter.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size test_filter.elf  |tee "test_filter.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  83740	   4880	  23440	 112060	  1b5bc	test_filter.elf
+'Finished building: test_filter.elf.size'
+' '
+
+01:57:26 Build Finished (took 3s.416ms)
+

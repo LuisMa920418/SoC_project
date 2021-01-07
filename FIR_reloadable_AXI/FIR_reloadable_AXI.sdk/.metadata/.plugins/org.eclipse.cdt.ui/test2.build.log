@@ -1,0 +1,29 @@
+10:26:15 **** Auto Build of configuration Debug for project test2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/FIR_driver.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/FIR_driver.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../test2_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/FIR_driver.d" -MT"src/FIR_driver.o" -o "src/FIR_driver.o" "../src/FIR_driver.c"
+In file included from ../src/FIR_driver.c:2:0:
+../src/FIR_driver.h:27:18: error: unknown type name 'filter'
+ void charge_coef(filter instance_filter);
+                  ^~~~~~
+../src/FIR_driver.c: In function 'charge_coef':
+../src/FIR_driver.c:33:46: error: 'baseaddr' undeclared (first use in this function); did you mean '_fread_r'?
+     toggle_register( mask_rst_shift_register,baseaddr);
+                                              ^~~~~~~~
+                                              _fread_r
+../src/FIR_driver.c:33:46: note: each undeclared identifier is reported only once for each function it appears in
+../src/FIR_driver.c:40:64: error: 'filter_coef' undeclared (first use in this function); did you mean 'filter_out'?
+         set_custom_ip_register(baseaddr, coef_register_offset, filter_coef[i]);
+                                                                ^~~~~~~~~~~
+                                                                filter_out
+../src/FIR_driver.c:41:7: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+       usleep(1);
+       ^~~~~~
+       fseek
+make: *** [src/FIR_driver.o] Error 1
+
+10:26:16 Build Finished (took 738ms)
+

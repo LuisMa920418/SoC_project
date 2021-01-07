@@ -1,0 +1,20 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 7fddee6143bd460c8dffd21151829f3d --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FIR_reloadable_v1_0_behav xil_defaultlib.FIR_reloadable_v1_0 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-122] fir remains a black-box since it has no binding entity [C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/filter_top.vhd:71]
+WARNING: [VRFC 10-122] coef_bank remains a black-box since it has no binding entity [C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/filter_top.vhd:86]
+WARNING: [VRFC 10-122] flip_flop remains a black-box since it has no binding entity [C:/cosas/eseca_M2/SoC/SoC_project/FIR_filter_reloadable/filter_top.vhd:99]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture structural of entity xil_defaultlib.filter_top [filter_top_default]
+Compiling architecture arch_imp of entity xil_defaultlib.FIR_reloadable_v1_0_S00_AXI [fir_reloadable_v1_0_s00_axi_defa...]
+Compiling architecture arch_imp of entity xil_defaultlib.fir_reloadable_v1_0
+Built simulation snapshot FIR_reloadable_v1_0_behav
